@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App355">
         <activity
+            android:name=".JournalPage"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
