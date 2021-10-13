@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App355">
         <activity
+            android:name=".Calendar"
+            android:exported="true" />
+        <activity
             android:name=".JournalPage"
             android:exported="true" />
         <activity
