@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerVertial="true"
+
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="696dp"
         android:text="Journal Page" />
