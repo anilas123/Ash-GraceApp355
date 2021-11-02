@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App355">
         <activity
+            android:name=".Mood.Mood_main"
+            android:exported="true" />
+        <activity
             android:name=".PromptsActivity"
             android:exported="true" />
         <activity

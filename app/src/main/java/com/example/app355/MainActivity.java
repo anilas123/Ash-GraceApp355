@@ -7,10 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.app355.Mood.Mood_main;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button journal;
     private Button calendar;
+    private Button mood;
 
 
     @Override
@@ -33,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
                 openCalendarPage();
             }
         });
+
+        mood = findViewById(R.id.mood);
+        mood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMoodPage();
+            }
+        });
     }
 
     public void openJournalPage() {
@@ -42,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openCalendarPage() {
         Intent intent = new Intent(this, Calendar.class);
+        startActivity(intent);
+    }
+
+    public void openMoodPage() {
+        Intent intent = new Intent(this, Mood_main.class);
         startActivity(intent);
     }
 }
