@@ -54,7 +54,7 @@ public class Mood_Q1 extends AppCompatActivity {
     }
 
     public void openNextPage() {
-        Intent intent = new Intent(this, Mood_Q3.class);
+        Intent intent = new Intent(this, Mood_Q2.class);
         startActivity(intent);
     }
 

@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.example.app355.R;
 
-public class Mood_Q2 extends AppCompatActivity {
+public class Mood_Q5 extends AppCompatActivity {
     RadioGroup radioGroup;
     RadioButton radioButton;
     TextView textView;
@@ -23,7 +23,7 @@ public class Mood_Q2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mood_q2);
+        setContentView(R.layout.activity_mood_q5);
 
         radioGroup = findViewById(R.id.radioGroup);
 
@@ -54,7 +54,7 @@ public class Mood_Q2 extends AppCompatActivity {
     }
 
     public void openNextPage() {
-        Intent intent = new Intent(this, Mood_Q3.class);
+        Intent intent = new Intent(this, Mood_Q6.class);
         startActivity(intent);
     }
 }

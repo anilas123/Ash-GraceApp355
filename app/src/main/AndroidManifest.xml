@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App355">
         <activity
+            android:name=".Mood.Mood_ScorePage"
+            android:exported="true" />
+        <activity
+            android:name=".Mood.Mood_Q8"
+            android:exported="true" />
+        <activity
+            android:name=".Mood.Mood_Q7"
+            android:exported="true" />
+        <activity
+            android:name=".Mood.Mood_Q6"
+            android:exported="true" />
+        <activity
+            android:name=".Mood.Mood_Q5"
+            android:exported="true" />
+        <activity
+            android:name=".Mood.Mood_Q4"
+            android:exported="true" />
+        <activity
             android:name=".Mood.Mood_Q3"
             android:exported="true" />
         <activity
