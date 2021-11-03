@@ -60,4 +60,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Mood_main.class);
         startActivity(intent);
     }
+
+    public void previousMonthAction(View view) {
+    }
+
+    public void nextMonthAction(View view) {
+    }
 }

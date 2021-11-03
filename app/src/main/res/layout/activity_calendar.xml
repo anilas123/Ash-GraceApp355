@@ -23,8 +23,9 @@
             android:textColor="@color/black"
             android:background="@null"
             android:textStyle="bold"
-            android:textSize="20sp"/>
-            #android:onClick="previousMonthAction"
+            android:textSize="20sp"
+            android:onClick="previousMonthAction"/>
+
 
         <TextView
             android:id="@+id/monthYearView"
@@ -44,8 +45,9 @@
             android:textColor="@color/black"
             android:background="@null"
             android:textStyle="bold"
-            android:textSize="20sp"/>
-            #android:onClick="nextMonthAction"
+            android:textSize="20sp"
+            android:onClick="nextMonthAction"/>
+
 
 
 
