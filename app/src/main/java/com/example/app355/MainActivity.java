@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapt.OnI
     private RecyclerView calendarRecyclerView;
     private LocalDate selectedDate;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapt.OnI
 
     //Calendar code starts
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void setMonthView() {
         monthYearText.setText(monthYearFromDate(selectedDate));
         ArrayList<String> daysInMonth = daysInMonthArray(selectedDate);
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapt.OnI
         calendarRecyclerView.setAdapter(calendarAdapt);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private ArrayList<String> daysInMonthArray(LocalDate date) {
         ArrayList<String> daysInMonthArray = new ArrayList<>();
         YearMonth yearMonth = YearMonth.from(date);
@@ -101,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapt.OnI
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onItemClick(int position, String dayText) {
         if(dayText.equals("")) {
@@ -110,6 +114,7 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapt.OnI
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private String monthYearFromDate(LocalDate date) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
         return date.format(formatter);
@@ -121,11 +126,13 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapt.OnI
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void previousMonthAction(View view) {
         selectedDate = selectedDate.minusMonths(1);
         setMonthView();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void nextMonthAction(View view) {
         selectedDate = selectedDate.plusMonths(1);
         setMonthView();
