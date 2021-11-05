@@ -18,7 +18,7 @@ public class Mood_main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood_main);
 
-        mood = findViewById(R.id.button2);
+        mood = findViewById(R.id.button_start);
         mood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
