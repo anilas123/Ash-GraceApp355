@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App355">
         <activity
-            android:name=".EditEventActivity"
+            android:name=".EventEditActivity"
             android:exported="true" />
         <activity
             android:name=".WeekViewActivity"
