@@ -6,20 +6,27 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 public class CalendarViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
+    private final ArrayList<LocalDate> days;
+    public final View parentView;
     public final TextView dayOfMonth;
-    private final CalendarAdapt.OnItemLister onItemLister;
+    private final CalendarAdapt.OnItemListener onItemListener;
 
-    public CalendarViewHolder(@NonNull View itemView, CalendarAdapt.OnItemLister onItemLister) {
+    public CalendarViewHolder(@NonNull View itemView, CalendarAdapt.OnItemListener onItemListener, ArrayList<LocalDate> days) {
         super(itemView);
+        parentView = itemView.findViewById(R.id.cellDayText);
         dayOfMonth = itemView.findViewById(R.id.cellDayText);
-        this.onItemLister = onItemLister;
+        this.onItemListener = onItemListener;
         itemView.setOnClickListener(this);
+        this.days = days;
     }
 
     @Override
     public void onClick(View view) {
-        onItemLister.onItemClick(getAdapterPosition(), (String) dayOfMonth.getText());
+        onItemListener.onItemClick(getAdapterPosition(), days.get(getAdapterPosition()));
     }
 }
