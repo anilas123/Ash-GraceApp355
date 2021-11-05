@@ -10,7 +10,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 6"
+        android:text="Question 6: How have you interacted with friends/family/colleagues?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,14 +32,14 @@
             android:layout_height="wrap_content"
             android:onClick="checkButton"
             android:checked="true"
-            android:text="Strongly Disagree" />
+            android:text="I've had fun conversations, tons of laughs today!" />
 
         <RadioButton
             android:id="@+id/radio_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Disagree" />
+            android:text="I've been too in my head to pay attention." />
 
         <RadioButton
             android:id="@+id/radio_three"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:onClick="checkButton"
-            android:text="Kinda Disagree" />
+            android:text="I've enjoyed listening to loved ones today." />
 
         <RadioButton
             android:id="@+id/radio_four"
@@ -55,21 +55,14 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:onClick="checkButton"
-            android:text="Kinda Agree" />
+            android:text="I've been less than enjoyable to interact with." />
 
         <RadioButton
             android:id="@+id/radio_five"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Agree" />
-
-        <RadioButton
-            android:id="@+id/radio_six"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checkButton"
-            android:text="Strongly Agree" />
+            android:text="I haven't really interacted with anyone today." />
 
 
     </RadioGroup>

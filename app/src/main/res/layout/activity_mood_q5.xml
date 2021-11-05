@@ -10,7 +10,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 5"
+        android:text="Question 5: How is your mental focus today?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,14 +32,14 @@
             android:layout_height="wrap_content"
             android:onClick="checkButton"
             android:checked="true"
-            android:text="Strongly Disagree" />
+            android:text="Great! I can concentrate on a task easily." />
 
         <RadioButton
             android:id="@+id/radio_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Disagree" />
+            android:text="Good. I feel in flow today." />
 
         <RadioButton
             android:id="@+id/radio_three"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:onClick="checkButton"
-            android:text="Kinda Disagree" />
+            android:text="Alright. I can finish a task but it'll take me a while." />
 
         <RadioButton
             android:id="@+id/radio_four"
@@ -55,21 +55,14 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:onClick="checkButton"
-            android:text="Kinda Agree" />
+            android:text="Less than good. My mind has been drifting today." />
 
         <RadioButton
             android:id="@+id/radio_five"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Agree" />
-
-        <RadioButton
-            android:id="@+id/radio_six"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checkButton"
-            android:text="Strongly Agree" />
+            android:text="Bad. I can barely focus to accomplish anything." />
 
 
     </RadioGroup>

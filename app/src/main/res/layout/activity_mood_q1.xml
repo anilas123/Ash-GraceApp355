@@ -10,7 +10,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 1"
+        android:text="Question 1: What’s your energy level today?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,14 +32,14 @@
             android:layout_height="wrap_content"
             android:onClick="checkButton"
             android:checked="true"
-            android:text="Strongly Disagree" />
+            android:text="High. I could conquer the world!" />
 
         <RadioButton
             android:id="@+id/radio_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Disagree" />
+            android:text="More than expected. I feel jittery." />
 
         <RadioButton
             android:id="@+id/radio_three"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:onClick="checkButton"
-            android:text="Kinda Disagree" />
+            android:text="Standard. Nothing is new." />
 
         <RadioButton
             android:id="@+id/radio_four"
@@ -55,21 +55,14 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:onClick="checkButton"
-            android:text="Kinda Agree" />
+            android:text="Relaxed. Nothing feels urgent." />
 
         <RadioButton
             android:id="@+id/radio_five"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Agree" />
-
-        <RadioButton
-            android:id="@+id/radio_six"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checkButton"
-            android:text="Strongly Agree" />
+            android:text="Very low. I feel tired and sluggish." />
 
 
     </RadioGroup>

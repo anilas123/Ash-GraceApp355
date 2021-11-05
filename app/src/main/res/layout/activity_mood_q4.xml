@@ -10,7 +10,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 4"
+        android:text="Question 4: How did you sleep last night?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,14 +32,14 @@
             android:layout_height="wrap_content"
             android:onClick="checkButton"
             android:checked="true"
-            android:text="Strongly Disagree" />
+            android:text="Well. I sprung out of bed this morning!" />
 
         <RadioButton
             android:id="@+id/radio_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Disagree" />
+            android:text="Not great. I tossed and turned all night." />
 
         <RadioButton
             android:id="@+id/radio_three"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:onClick="checkButton"
-            android:text="Kinda Disagree" />
+            android:text="Comfortably. Waking up was easy." />
 
         <RadioButton
             android:id="@+id/radio_four"
@@ -55,21 +55,14 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:onClick="checkButton"
-            android:text="Kinda Agree" />
+            android:text="I could barely sleep. My thoughts were racing." />
 
         <RadioButton
             android:id="@+id/radio_five"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton"
-            android:text="Agree" />
-
-        <RadioButton
-            android:id="@+id/radio_six"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checkButton"
-            android:text="Strongly Agree" />
+            android:text="Like the dead. It was hard to get out of bed this morning." />
 
 
     </RadioGroup>
