@@ -11,9 +11,9 @@ public class QuestionBank {
 
         final QuestionsList question1 = new QuestionsList("What's your energy level today?",
                 "High,I could conquer the world!",
-                "More than expected. I feel jittery.",
-                "Standard.Nothing is new.",
                 "Relaxed.Nothing feels urgent.",
+                "Standard.Nothing is new.",
+                "More than expected. I feel jittery.",
                 "Very low.I feel tired and sluggish.",
                 "High,I could conquer the world!",
                 "Relaxed.Nothing feels urgent.",
@@ -21,10 +21,12 @@ public class QuestionBank {
                 "More than expected. I feel jittery.",
                 "Very low.I feel tired and sluggish.","");
 
+
+
         final QuestionsList question2 = new QuestionsList("Which best describes your attitude today?",
                 "I feel confident and hopeful!",
-                "I feel easily bothered.",
                 "I feel serene and grounded.",
+                "I feel easily bothered.",
                 "I feel on edge.",
                 "I feel apathetic and pessimistic.",
                 "I feel confident and hopeful!",
@@ -34,10 +36,10 @@ public class QuestionBank {
                 "I feel apathetic and pessimistic.","");
 
         final QuestionsList question3 = new QuestionsList("How has your appetite been today?",
-                "High. I can't stop snacking.",
                 "Fine. Nothing out of the ordinary!",
                 "Normal. Keeping a balanced diet.",
                 "Less than normal.",
+                "High. I can't stop snacking.",
                 "| have no appetite.",
                 "Fine. Nothing out of the ordinary!",
                 "Normal. Keeping a balanced diet.",
@@ -47,8 +49,8 @@ public class QuestionBank {
 
         final QuestionsList question4 = new QuestionsList("How did you sleep last night?",
                 "Well. I sprung out of bed this morning!",
-                "Not Well. I tossed and turned all night.",
                 "Comfortably. Waking up was easy.",
+                "Standard.Nothing is new.",
                 "I could barely sleep, my thoughts were racing.",
                 "Like the dead. It was hard to get out of bed this morning.",
                 "Well. I sprung out of bed this morning!",
@@ -61,19 +63,19 @@ public class QuestionBank {
                 "Great! I can concentrate on finishing a task easily.",
                 "Good. I feel in flow today.",
                 "Alright. I can finish a task but it'll take me a while.",
-                "Less than good. My mind has been drifting today.",
                 "Bad. I can barely focus to accomplish anything.",
+                "Less than good. My mind has been drifting today.",
                 "Great! I can concentrate on finishing a task easily.",
                 "Good. I feel in flow today.",
-                "Standard.Nothing is new.",
+                "Alright. I can finish a task but it'll take me a while.",
                 "Bad. I can barely focus to accomplish anything.",
                 "Less than good. My mind has been drifting today.","");
 
         final QuestionsList question6 = new QuestionsList("How have you interacted with colleagues/friends/family?",
                 "I've had fun conversations, laughed a lot today!",
-                "I've been too in my head to pay attention",
                 "I've enjoyed listening to loved ones today.",
                 "I've been less than enjoyable to interact with.",
+                "I've been too in my head to pay attention",
                 "I haven't really interacted with anyone",
                 "I've had fun conversations, laughed a lot today!",
                 "I've enjoyed listening to loved ones today.",

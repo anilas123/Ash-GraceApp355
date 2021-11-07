@@ -23,7 +23,7 @@ public class Mood_Q1 extends AppCompatActivity {
     private TextView textView;
 
 
-    private AppCompatButton option1,option2,option3,option4,option5;
+    private AppCompatButton option1, option2, option3, option4, option5;
     private AppCompatButton nextBtn;
 
     private List<QuestionsList> questionsLists;
@@ -31,6 +31,7 @@ public class Mood_Q1 extends AppCompatActivity {
 
     private String selectedOptionByUser = "";
 
+    public static int totalPoints = 0;
 
 
     @Override
@@ -62,12 +63,13 @@ public class Mood_Q1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (selectedOptionByUser.isEmpty()){
+                if (selectedOptionByUser.isEmpty()) {
 
                     selectedOptionByUser = option1.getText().toString();
 
                     questionsLists.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
 
+                    option1.setBackgroundColor(1);
                 }
             }
         });
@@ -76,12 +78,13 @@ public class Mood_Q1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (selectedOptionByUser.isEmpty()){
+                if (selectedOptionByUser.isEmpty()) {
 
                     selectedOptionByUser = option2.getText().toString();
 
                     questionsLists.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
 
+                    option2.setBackgroundColor(1);
                 }
             }
         });
@@ -90,13 +93,13 @@ public class Mood_Q1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (selectedOptionByUser.isEmpty()){
+                if (selectedOptionByUser.isEmpty()) {
 
                     selectedOptionByUser = option3.getText().toString();
 
                     questionsLists.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
 
-
+                    option3.setBackgroundColor(1);
                 }
             }
         });
@@ -105,13 +108,13 @@ public class Mood_Q1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (selectedOptionByUser.isEmpty()){
+                if (selectedOptionByUser.isEmpty()) {
 
                     selectedOptionByUser = option4.getText().toString();
 
                     questionsLists.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
 
-
+                    option4.setBackgroundColor(1);
                 }
             }
         });
@@ -120,13 +123,13 @@ public class Mood_Q1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (selectedOptionByUser.isEmpty()){
+                if (selectedOptionByUser.isEmpty()) {
 
                     selectedOptionByUser = option5.getText().toString();
 
                     questionsLists.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
 
-
+                    option5.setBackgroundColor(1);
                 }
             }
         });
@@ -134,28 +137,29 @@ public class Mood_Q1 extends AppCompatActivity {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (selectedOptionByUser.isEmpty()){
+                if (selectedOptionByUser.isEmpty()) {
                     Toast.makeText(Mood_Q1.this, "Please select an option", Toast.LENGTH_SHORT).show();
-                }
-                else{
+                } else {
                     Toast.makeText(Mood_Q1.this, "Selected answer: " + selectedOptionByUser, Toast.LENGTH_SHORT).show();
+                    totalPoints = getPoints();
                     changeNextQuestion();
                 }
+
 
             }
         });
     }
 
 
-    private void changeNextQuestion(){
+    private void changeNextQuestion() {
         currentQuestionPosition++;
 
-        if ((currentQuestionPosition+1) == questionsLists.size()){
+        if ((currentQuestionPosition + 1) == questionsLists.size()) {
             nextBtn.setText("Submit");
         }
 
-        if (currentQuestionPosition < questionsLists.size()){
-            selectedOptionByUser="";
+        if (currentQuestionPosition < questionsLists.size()) {
+            selectedOptionByUser = "";
 
             option1.setBackgroundResource(R.drawable.round_button_color);
             option1.setTextColor(Color.parseColor("#000000"));
@@ -179,44 +183,44 @@ public class Mood_Q1 extends AppCompatActivity {
             option4.setText(questionsLists.get(currentQuestionPosition).getOption4());
             option5.setText(questionsLists.get(currentQuestionPosition).getOption5());
 
-        }
-        else{
-            Intent intent = new Intent(Mood_Q1.this,Mood_ScorePage.class);
+
+        } else {
+            Intent intent = new Intent(Mood_Q1.this, Mood_ScorePage.class);
             startActivity(intent);
         }
     }
 
 
-
-    public int getPoints(){
+    public int getPoints() {
 
         int points = 0;
 
-        for (int i = 0; i < questionsLists.size(); i++){
+         for (int i = 0; i < questionsLists.size(); i++){
 
-            final String getUserSelectedAnswer = questionsLists.get(i).getUserSelectedAnswer();
-            final String getHappy = questionsLists.get(i).getHappy();
-            final String getCalm = questionsLists.get(i).getCalm();
-            final String getAnnoyed = questionsLists.get(i).getAnnoyed();
-            final String getUpset = questionsLists.get(i).getUpset();
-            final String getSad = questionsLists.get(i).getSad();
+        final String getUserSelectedAnswer = questionsLists.get(currentQuestionPosition).getUserSelectedAnswer();
+        final String getHappy = questionsLists.get(currentQuestionPosition).getHappy();
+        final String getCalm = questionsLists.get(currentQuestionPosition).getCalm();
+        final String getAnnoyed = questionsLists.get(currentQuestionPosition).getAnnoyed();
+        final String getUpset = questionsLists.get(currentQuestionPosition).getUpset();
+        final String getSad = questionsLists.get(currentQuestionPosition).getSad();
 
-            if (getUserSelectedAnswer.equals(getHappy)){
-                points+=5;
-            }else if(getUserSelectedAnswer.equals(getCalm)){
-                points+=4;
-            }else if(getUserSelectedAnswer.equals(getAnnoyed)){
-                points+=3;
-            }else if(getUserSelectedAnswer.equals(getUpset)){
-                points+=2;
-            }else if(getUserSelectedAnswer.equals(getSad)){
-                points+=1;
-            }
-
+        if (getUserSelectedAnswer.equals(getHappy)) {
+            points += 5;
+        } else if (getUserSelectedAnswer.equals(getCalm)) {
+            points += 4;
+        } else if (getUserSelectedAnswer.equals(getAnnoyed)) {
+            points += 3;
+        } else if (getUserSelectedAnswer.equals(getUpset)) {
+            points += 2;
+        } else if (getUserSelectedAnswer.equals(getSad)) {
+            points += 1;
         }
+
+         }
 
         return points;
     }
+}
 
 //        radioGroup = findViewById(R.id.radioGroup);
 //
@@ -251,4 +255,3 @@ public class Mood_Q1 extends AppCompatActivity {
 //        startActivity(intent);
         // }
 
-}

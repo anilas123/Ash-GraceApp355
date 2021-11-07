@@ -16,6 +16,7 @@ public class Mood_ScorePage extends AppCompatActivity {
 
     private TextView textView;
     private Button button;
+    private String string;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,30 +26,32 @@ public class Mood_ScorePage extends AppCompatActivity {
         textView = findViewById(R.id.textView9);
         button = findViewById(R.id.button);
 
+        i = moodQ1.getPoints() / 7;
+
+        if (i > 4 && i == 5){
+            string = "You are happy";
+        }
+        else if (i >3 && i == 4){
+            string = "You are calm";
+        }
+        else if (i >2 && i == 3){
+            string = "You are annoyed";
+        }
+        else if (i >1 && i == 2){
+            string = "You are upset";
+        }
+        else if (i >0 && i == 1){
+            string = "You are sad";
+        }
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText("Your mood is Happy");
+                textView.setText(string);
             }
         });
 
-//        i = moodQ1.getPoints();
-//
-//        if (i > 4 && i <= 5){
-//            textView.setText("Your mood is happy");
-//        }
-//        else if (i >3 && i <= 4){
-//            textView.setText("Your mood is calm");
-//        }
-//        else if (i >2 && i <= 3){
-//            textView.setText("Your mood is annoyed");
-//        }
-//        else if (i >1 && i <= 2){
-//            textView.setText("Your mood is upset");
-//        }
-//        else if (i >0 && i <= 1){
-//            textView.setText("Your mood is sad");
-//        }
+
 
 
 
