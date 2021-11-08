@@ -10,13 +10,13 @@ import android.widget.TextView;
 import com.example.app355.R;
 
 public class Mood_ScorePage extends AppCompatActivity {
-    Mood_Q1 moodQ1 = new Mood_Q1();
+
 
     int i = 0;
 
     private TextView textView;
     private Button button;
-    private String string;
+    private String string = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,34 +26,36 @@ public class Mood_ScorePage extends AppCompatActivity {
         textView = findViewById(R.id.textView9);
         button = findViewById(R.id.button);
 
-        i = moodQ1.getPoints() / 7;
+        textView.setText(Mood(string));
 
-        if (i > 4 && i == 5){
-            string = "You are happy";
-        }
-        else if (i >3 && i == 4){
-            string = "You are calm";
-        }
-        else if (i >2 && i == 3){
-            string = "You are annoyed";
-        }
-        else if (i >1 && i == 2){
-            string = "You are upset";
-        }
-        else if (i >0 && i == 1){
-            string = "You are sad";
-        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(string);
+
             }
         });
 
+    }
 
+    public String Mood(String string){
+        i = Mood_Q1.totalPoints / 7;
 
-
-
+        if (i >4 || i <= 5){
+            string = "You are happy";
+        }
+        else if (i >3 || i <= 4){
+            string = "You are calm";
+        }
+        else if (i >2 || i <= 3){
+            string = "You are annoyed";
+        }
+        else if (i >1 || i <= 2){
+            string = "You are upset";
+        }
+        else if (i >0 || i <= 1){
+            string = "You are sad";
+        }
+        return string;
     }
 }

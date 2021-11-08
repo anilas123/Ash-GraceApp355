@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,6 +10,10 @@
     tools:context=".Mood.Mood_ScorePage">
 
 
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:orientation="vertical">
+
 
     <TextView
         android:id="@+id/textView9"
@@ -19,12 +23,17 @@
         android:text="Your score is: "
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:layout_marginBottom="30dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button"
         android:layout_marginTop="16dp"
-        android:text="Check Result"/>
-</LinearLayout>
+        android:text="Check Result"
+        />
+
+    </LinearLayout>
+
+</RelativeLayout>
