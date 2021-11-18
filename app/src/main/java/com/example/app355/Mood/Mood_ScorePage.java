@@ -16,7 +16,6 @@ public class Mood_ScorePage extends AppCompatActivity {
 
     private TextView textView;
     private Button button;
-    private String string = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,7 @@ public class Mood_ScorePage extends AppCompatActivity {
         textView = findViewById(R.id.textView9);
         button = findViewById(R.id.button);
 
-        textView.setText(Mood(string));
+        textView.setText(Mood());
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -38,24 +37,35 @@ public class Mood_ScorePage extends AppCompatActivity {
 
     }
 
-    public String Mood(String string){
-        i = Mood_Q1.totalPoints / 7;
+    public String Mood(){
 
-        if (i >4 || i <= 5){
-            string = "You are happy";
+        int[] array = {Mood_Q1.happyCount,Mood_Q1.calmCount,Mood_Q1.annoyedCount,Mood_Q1.upsetCount,Mood_Q1.sadCount};
+        int large = 0;
+
+        for (int i = 0; i < 5; i++){
+            if (array[i] > large){
+                large = array[i];
+            }
         }
-        else if (i >3 || i <= 4){
-            string = "You are calm";
+        if (large == Mood_Q1.happyCount){
+            return  "You are happy";
         }
-        else if (i >2 || i <= 3){
-            string = "You are annoyed";
+        else if(large == Mood_Q1.calmCount){
+            return "You are calm";
         }
-        else if (i >1 || i <= 2){
-            string = "You are upset";
+        else if(large == Mood_Q1.annoyedCount){
+            return "You are Annoyed";
         }
-        else if (i >0 || i <= 1){
-            string = "You are sad";
+        else if(large == Mood_Q1.upsetCount){
+            return "You are Upset";
         }
-        return string;
+        else if(large == Mood_Q1.sadCount){
+            return "You are sad";
+        }
+        else
+            return "";
+
     }
+
+
 }

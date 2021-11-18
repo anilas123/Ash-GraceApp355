@@ -31,7 +31,11 @@ public class Mood_Q1 extends AppCompatActivity {
 
     private String selectedOptionByUser = "";
 
-    public static int totalPoints = 0;
+    public static int happyCount = 0;
+    public static int calmCount = 0;
+    public static int annoyedCount = 0;
+    public static int upsetCount = 0;
+    public static int sadCount = 0;
 
 
     @Override
@@ -141,7 +145,7 @@ public class Mood_Q1 extends AppCompatActivity {
                     Toast.makeText(Mood_Q1.this, "Please select an option", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(Mood_Q1.this, "Selected answer: " + selectedOptionByUser, Toast.LENGTH_SHORT).show();
-                    totalPoints = getPoints();
+                    getPoints();
                     changeNextQuestion();
                 }
 
@@ -191,11 +195,8 @@ public class Mood_Q1 extends AppCompatActivity {
     }
 
 
-    public int getPoints() {
+    private void getPoints() {
 
-        int points = 0;
-
-         for (int i = 0; i < questionsLists.size(); i++){
 
         final String getUserSelectedAnswer = questionsLists.get(currentQuestionPosition).getUserSelectedAnswer();
         final String getHappy = questionsLists.get(currentQuestionPosition).getHappy();
@@ -205,53 +206,19 @@ public class Mood_Q1 extends AppCompatActivity {
         final String getSad = questionsLists.get(currentQuestionPosition).getSad();
 
         if (getUserSelectedAnswer.equals(getHappy)) {
-            points += 5;
+            happyCount++;
         } else if (getUserSelectedAnswer.equals(getCalm)) {
-            points += 4;
+            calmCount++;
         } else if (getUserSelectedAnswer.equals(getAnnoyed)) {
-            points += 3;
+            annoyedCount++;
         } else if (getUserSelectedAnswer.equals(getUpset)) {
-            points += 2;
+            upsetCount++;
         } else if (getUserSelectedAnswer.equals(getSad)) {
-            points += 1;
+            sadCount++;
         }
 
-         }
 
-        return points;
     }
 }
 
-//        radioGroup = findViewById(R.id.radioGroup);
-//
-//        textView = findViewById(R.id.Text_view_selected);
-//
-//        Button buttonNext = findViewById(R.id.button_next);
-//        buttonNext.setOnClickListener(new View.OnClickListener() {
-//                                          @Override
-//                                          public void onClick(View v) {
-//                                              int radioId = radioGroup.getCheckedRadioButtonId();
-//                                              radioButton = findViewById(radioId);
-//
-//                                              textView.setText("Your choice: " + radioButton.getText());
-//
-//                                              openNextPage();
-//                                          }
-//                                      });
-//
-//
-//
-//    }
-//
-//    public void checkButton(View v){
-//        int radioId = radioGroup.getCheckedRadioButtonId();
-//        radioButton = findViewById(radioId);
-//
-//        Toast.makeText(this,"Selected Radio Button: " + radioButton.getText(), Toast.LENGTH_SHORT).show();
-//    }
-//
-//    public void openNextPage() {
-//        Intent intent = new Intent(this, Mood_Q2.class);
-//        startActivity(intent);
-        // }
 
