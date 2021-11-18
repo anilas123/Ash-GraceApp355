@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.app355.JournalPage;
@@ -18,6 +19,7 @@ public class Mood_ScorePage extends AppCompatActivity {
 
     private TextView textView;
     private Button button;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +28,15 @@ public class Mood_ScorePage extends AppCompatActivity {
 
         textView = findViewById(R.id.textView9);
         button = findViewById(R.id.button);
+        imageView = (ImageView) findViewById(R.id.image_view);
 
-        textView.setText(Mood());
 
+        if (Mood().equalsIgnoreCase(" you are sad")){
+            imageView.setImageResource(R.drawable.img_1);
+            imageView.setMinimumHeight(50);
+            imageView.setMinimumWidth(50);
+            textView.setText("Hey! " + Mood_main.name + Mood());
+        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,19 +60,19 @@ public class Mood_ScorePage extends AppCompatActivity {
             }
         }
         if (large == Mood_Q1.happyCount){
-            return  "You are happy";
+            return " You are happy";
         }
         else if(large == Mood_Q1.calmCount){
-            return "You are calm";
+            return " You are calm";
         }
         else if(large == Mood_Q1.annoyedCount){
-            return "You are Annoyed";
+            return " You are Annoyed";
         }
         else if(large == Mood_Q1.upsetCount){
-            return "You are Upset";
+            return " You are Upset";
         }
         else if(large == Mood_Q1.sadCount){
-            return "You are sad";
+            return " You are sad";
         }
         else
             return "";

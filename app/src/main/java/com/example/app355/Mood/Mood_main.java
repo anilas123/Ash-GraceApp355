@@ -13,6 +13,8 @@ import com.example.app355.R;
 
 public class Mood_main extends AppCompatActivity {
     private Button mood;
+    private EditText editText;
+    public static String name;
 
 
 
@@ -21,12 +23,14 @@ public class Mood_main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood_main);
 
+        editText = findViewById(R.id.et_name);
 
 
         mood = findViewById(R.id.button_start);
         mood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                name = editText.getText().toString();
                 openMoodPage();
             }
         });
