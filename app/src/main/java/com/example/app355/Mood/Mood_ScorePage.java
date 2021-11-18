@@ -2,17 +2,19 @@ package com.example.app355.Mood;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.app355.JournalPage;
 import com.example.app355.R;
 
 public class Mood_ScorePage extends AppCompatActivity {
 
 
-    int i = 0;
+
 
     private TextView textView;
     private Button button;
@@ -31,6 +33,8 @@ public class Mood_ScorePage extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                openMood_mainPage();
+                Mood_Q1.clearCounts();
 
             }
         });
@@ -65,6 +69,11 @@ public class Mood_ScorePage extends AppCompatActivity {
         else
             return "";
 
+    }
+
+    public void openMood_mainPage() {
+        Intent intent = new Intent(this, Mood_main.class);
+        startActivity(intent);
     }
 
 

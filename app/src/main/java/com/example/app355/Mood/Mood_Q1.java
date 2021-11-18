@@ -20,11 +20,9 @@ import java.util.List;
 
 public class Mood_Q1 extends AppCompatActivity {
     private TextView questions;
-    private TextView textView;
-
 
     private AppCompatButton option1, option2, option3, option4, option5;
-    private AppCompatButton nextBtn;
+    private AppCompatButton nextBtn,prevBtn;
 
     private List<QuestionsList> questionsLists;
     private int currentQuestionPosition = 0;
@@ -51,8 +49,8 @@ public class Mood_Q1 extends AppCompatActivity {
         option4 = findViewById(R.id.option4);
         option5 = findViewById(R.id.option5);
         nextBtn = findViewById(R.id.nextBtn);
+        prevBtn = findViewById(R.id.prevBtn);
 
-        textView = findViewById(R.id.Text_view_selected);
 
         questionsLists = QuestionBank.getQuestionList();
 
@@ -152,6 +150,14 @@ public class Mood_Q1 extends AppCompatActivity {
 
             }
         });
+
+        prevBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changePrevQuestion();
+                deletPoints();
+            }
+        });
     }
 
 
@@ -194,6 +200,42 @@ public class Mood_Q1 extends AppCompatActivity {
         }
     }
 
+    //Need to add some code that will wipe out the choice user made
+    private void changePrevQuestion() {
+        currentQuestionPosition--;
+
+        if (currentQuestionPosition < questionsLists.size()) {
+            selectedOptionByUser = "";
+
+            option1.setBackgroundResource(R.drawable.round_button_color);
+            option1.setTextColor(Color.parseColor("#000000"));
+
+            option2.setBackgroundResource(R.drawable.round_button_color);
+            option2.setTextColor(Color.parseColor("#000000"));
+
+            option3.setBackgroundResource(R.drawable.round_button_color);
+            option3.setTextColor(Color.parseColor("#000000"));
+
+            option4.setBackgroundResource(R.drawable.round_button_color);
+            option4.setTextColor(Color.parseColor("#000000"));
+
+            option5.setBackgroundResource(R.drawable.round_button_color);
+            option5.setTextColor(Color.parseColor("#000000"));
+
+            questions.setText(questionsLists.get(currentQuestionPosition).getQuestion());
+            option1.setText(questionsLists.get(currentQuestionPosition).getOption1());
+            option2.setText(questionsLists.get(currentQuestionPosition).getOption2());
+            option3.setText(questionsLists.get(currentQuestionPosition).getOption3());
+            option4.setText(questionsLists.get(currentQuestionPosition).getOption4());
+            option5.setText(questionsLists.get(currentQuestionPosition).getOption5());
+
+
+        } else {
+            Intent intent = new Intent(Mood_Q1.this, Mood_main.class);
+            startActivity(intent);
+        }
+    }
+
 
     private void getPoints() {
 
@@ -218,6 +260,39 @@ public class Mood_Q1 extends AppCompatActivity {
         }
 
 
+    }
+
+    private void deletPoints() {
+
+
+        final String getUserSelectedAnswer = questionsLists.get(currentQuestionPosition).getUserSelectedAnswer();
+        final String getHappy = questionsLists.get(currentQuestionPosition).getHappy();
+        final String getCalm = questionsLists.get(currentQuestionPosition).getCalm();
+        final String getAnnoyed = questionsLists.get(currentQuestionPosition).getAnnoyed();
+        final String getUpset = questionsLists.get(currentQuestionPosition).getUpset();
+        final String getSad = questionsLists.get(currentQuestionPosition).getSad();
+
+        if (getUserSelectedAnswer.equals(getHappy)) {
+            happyCount--;
+        } else if (getUserSelectedAnswer.equals(getCalm)) {
+            calmCount--;
+        } else if (getUserSelectedAnswer.equals(getAnnoyed)) {
+            annoyedCount--;
+        } else if (getUserSelectedAnswer.equals(getUpset)) {
+            upsetCount--;
+        } else if (getUserSelectedAnswer.equals(getSad)) {
+            sadCount--;
+        }
+
+
+    }
+
+    static void clearCounts(){
+        happyCount = 0;
+        calmCount = 0;
+        annoyedCount = 0;
+        upsetCount = 0;
+        sadCount = 0;
     }
 }
 
