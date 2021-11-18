@@ -20,10 +20,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/img_2"/>
+            android:src="@drawable/img_2" />
 
-
-    <TextView
+        <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,13 +33,41 @@
         android:textSize="20sp"
         android:layout_marginBottom="30dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:id="@+id/button"
-        android:layout_gravity="center"
-        android:layout_height="50dp"
-        android:text="Retake"
-        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save"
+            android:layout_width= "wrap_content"
+            android:layout_height="50dp"
+            android:text="Save"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="175dp"
+            android:layout_marginEnd="80dp"
+            android:background="@android:color/holo_green_light"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/retakeButton"
+            android:layout_width= "wrap_content"
+            android:layout_height="50dp"
+            android:text="Retake"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="175dp"
+            android:layout_marginEnd="80dp"
+            android:background="@android:color/holo_green_light"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backButton"
+            android:layout_width= "wrap_content"
+            android:layout_height="50dp"
+            android:text="Main Page"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="175dp"
+            android:layout_marginEnd="80dp"
+            android:background="@android:color/holo_green_light"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"/>
 
     </LinearLayout>
 

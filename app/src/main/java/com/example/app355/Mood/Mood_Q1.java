@@ -19,6 +19,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Mood_Q1 extends AppCompatActivity {
+    /*
+     * Declaration of the instance variables most of them are private
+     * Counts are static b/c we will pass it to Mood_ScorePage.java
+     */
+
     private TextView questions;
 
     private AppCompatButton option1, option2, option3, option4, option5;
@@ -51,9 +56,11 @@ public class Mood_Q1 extends AppCompatActivity {
         nextBtn = findViewById(R.id.nextBtn);
         prevBtn = findViewById(R.id.prevBtn);
 
-
         questionsLists = QuestionBank.getQuestionList();
 
+        /*
+         * Setting the first question and answer options
+         */
         questions.setText(questionsLists.get(0).getQuestion());
         option1.setText(questionsLists.get(0).getOption1());
         option2.setText(questionsLists.get(0).getOption2());
@@ -155,12 +162,15 @@ public class Mood_Q1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 changePrevQuestion();
-                deletPoints();
+                deletePoints();
             }
         });
     }
 
-
+    /*
+     * This method will increment the current question position in the questions list
+     * And changes the questions and answer options to a new one
+     */
     private void changeNextQuestion() {
         currentQuestionPosition++;
 
@@ -200,7 +210,10 @@ public class Mood_Q1 extends AppCompatActivity {
         }
     }
 
-    //Need to add some code that will wipe out the choice user made
+    /*
+     * This method will decrement the current question position by 1
+     * And changes question and answer options back to the previous one
+     */
     private void changePrevQuestion() {
         currentQuestionPosition--;
 
@@ -236,10 +249,12 @@ public class Mood_Q1 extends AppCompatActivity {
         }
     }
 
-
+    /*
+     * This method will count how many times each option was selected
+     */
     private void getPoints() {
 
-
+        //Storing the user selected answer and different possible answers
         final String getUserSelectedAnswer = questionsLists.get(currentQuestionPosition).getUserSelectedAnswer();
         final String getHappy = questionsLists.get(currentQuestionPosition).getHappy();
         final String getCalm = questionsLists.get(currentQuestionPosition).getCalm();
@@ -262,8 +277,11 @@ public class Mood_Q1 extends AppCompatActivity {
 
     }
 
-    private void deletPoints() {
-
+    /*
+     * This method is designed for changePrevQuestion()
+     * It will delete the counted option when we go back to previous question
+     */
+    private void deletePoints() {
 
         final String getUserSelectedAnswer = questionsLists.get(currentQuestionPosition).getUserSelectedAnswer();
         final String getHappy = questionsLists.get(currentQuestionPosition).getHappy();
@@ -287,6 +305,10 @@ public class Mood_Q1 extends AppCompatActivity {
 
     }
 
+    /*
+     * This method is designed for when the user retakes the quiz
+     * it will clean out all the counts
+     */
     static void clearCounts(){
         happyCount = 0;
         calmCount = 0;

@@ -12,6 +12,9 @@ import android.widget.Toast;
 import com.example.app355.R;
 
 public class Mood_main extends AppCompatActivity {
+    /*
+     *Declaring the instance variables most of them are private, name has to be static b/c we need to at Mood_scorepage.java
+     */
     private Button mood;
     private EditText editText;
     public static String name;
@@ -25,12 +28,11 @@ public class Mood_main extends AppCompatActivity {
 
         editText = findViewById(R.id.et_name);
 
-
         mood = findViewById(R.id.button_start);
         mood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                name = editText.getText().toString();
+                name = editText.getText().toString();           //Where the user input their name and we store it
                 openMoodPage();
             }
         });
