@@ -5,7 +5,7 @@ import java.util.List;
 
 public class QuestionBank {
 
-    private static List<QuestionsList> javaQuestions(){
+    private static List<QuestionsList> MoodQuestion1(){
 
         final List<QuestionsList> questionsLists = new ArrayList<>();
 
@@ -97,6 +97,7 @@ public class QuestionBank {
                 "Upset",
                 "Sad","");
 
+
         questionsLists.add(question1);
         questionsLists.add(question2);
         questionsLists.add(question3);
@@ -109,7 +110,7 @@ public class QuestionBank {
     }
 
     public static List<QuestionsList> getQuestionList(){
-        return javaQuestions();
+        return MoodQuestion1();
     }
 
 }
