@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="d2d2d2"
+    android:background="#d2d2d2"
     app:layout_behavior="@string/fab_transformation_scrim_behavior"
     tools:context=".FreewriteActivity"
     android:id="@+id/layout_freewrite">
