@@ -12,15 +12,15 @@ public class MotivationBank {
     private static List<MotivationList> ForHappy(){
         final List<MotivationList> ForHappy = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("1"); //<-- type here
+        final MotivationList line1 = new MotivationList("1");
 
-        final MotivationList line2 = new MotivationList("2"); //<-- type here
+        final MotivationList line2 = new MotivationList("2");
 
-        final MotivationList line3 = new MotivationList("3"); //<-- type here
+        final MotivationList line3 = new MotivationList("3");
 
-        final MotivationList line4 = new MotivationList("4"); //<-- type here
+        final MotivationList line4 = new MotivationList("4");
 
-        final MotivationList line5 = new MotivationList("5"); //<-- type here
+        final MotivationList line5 = new MotivationList("5");
 
         ForHappy.add(line1);
         ForHappy.add(line2);
@@ -38,15 +38,15 @@ public class MotivationBank {
     private static List<MotivationList> ForCalm(){
         final List<MotivationList> ForCalm = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("6"); //<-- type here
+        final MotivationList line1 = new MotivationList("6");
 
-        final MotivationList line2 = new MotivationList("7"); //<-- type here
+        final MotivationList line2 = new MotivationList("7");
 
-        final MotivationList line3 = new MotivationList("8"); //<-- type here
+        final MotivationList line3 = new MotivationList("8");
 
-        final MotivationList line4 = new MotivationList("9"); //<-- type here
+        final MotivationList line4 = new MotivationList("9");
 
-        final MotivationList line5 = new MotivationList("10"); //<-- type here
+        final MotivationList line5 = new MotivationList("10");
 
 
         ForCalm.add(line1);
@@ -65,15 +65,15 @@ public class MotivationBank {
     private static List<MotivationList> ForAnnoyed(){
         final List<MotivationList> ForAnnoyed = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("11"); //<-- type here
+        final MotivationList line1 = new MotivationList("11");
 
-        final MotivationList line2 = new MotivationList("12"); //<-- type here
+        final MotivationList line2 = new MotivationList("12");
 
-        final MotivationList line3 = new MotivationList("13"); //<-- type here
+        final MotivationList line3 = new MotivationList("13");
 
-        final MotivationList line4 = new MotivationList("14"); //<-- type here
+        final MotivationList line4 = new MotivationList("14");
 
-        final MotivationList line5 = new MotivationList("15"); //<-- type here
+        final MotivationList line5 = new MotivationList("15");
 
         ForAnnoyed.add(line1);
         ForAnnoyed.add(line2);
@@ -91,15 +91,15 @@ public class MotivationBank {
     private static List<MotivationList> ForUpset(){
         final List<MotivationList> ForUpset = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("16"); //<-- type here
+        final MotivationList line1 = new MotivationList("16");
 
-        final MotivationList line2 = new MotivationList("17"); //<-- type here
+        final MotivationList line2 = new MotivationList("17");
 
-        final MotivationList line3 = new MotivationList("18"); //<-- type here
+        final MotivationList line3 = new MotivationList("18");
 
-        final MotivationList line4 = new MotivationList("19"); //<-- type here
+        final MotivationList line4 = new MotivationList("19");
 
-        final MotivationList line5 = new MotivationList("20"); //<-- type here
+        final MotivationList line5 = new MotivationList("20");
 
         ForUpset.add(line1);
         ForUpset.add(line2);
@@ -120,13 +120,13 @@ public class MotivationBank {
         final MotivationList line1 = new MotivationList("So today was a bit of a cock-up. Meh. " +
                 "It’s okay to be messy. Forgive yourself and hope for a radder tomorrow.");
 
-        final MotivationList line2 = new MotivationList("22"); //<-- type here
+        final MotivationList line2 = new MotivationList("22");
 
-        final MotivationList line3 = new MotivationList("23"); //<-- type here
+        final MotivationList line3 = new MotivationList("23");
 
-        final MotivationList line4 = new MotivationList("24"); //<-- type here
+        final MotivationList line4 = new MotivationList("24");
 
-        final MotivationList line5 = new MotivationList("25"); //<-- type here
+        final MotivationList line5 = new MotivationList("25");
 
         ForSad.add(line1);
         ForSad.add(line2);
