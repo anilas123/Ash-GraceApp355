@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prompts Page"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="209dp" />
+        android:gravity="center"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
