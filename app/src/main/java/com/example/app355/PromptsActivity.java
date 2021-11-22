@@ -22,11 +22,11 @@ public class PromptsActivity extends AppCompatActivity {
         listView = findViewById(R.id.listview);
 
         ArrayList<String> promptList = new ArrayList<>();
-        promptList.add("prompt 1");
-        promptList.add("prompt 2");
-        promptList.add("prompt 3");
-        promptList.add("prompt 4");
-        promptList.add("prompt 5");
+        promptList.add("What are three things you are grateful for, and why?");
+        promptList.add("Write a letter to your greatest fear, tell it how you feel.");
+        promptList.add("Get in touch with your surroundings! Find a spot to sit for five minutes, write what you see, hear and/or feel.");
+        promptList.add("Write a list of short term goals for yourself. Make them realistic.");
+        promptList.add("Write an apology to yourself. Forgive yourself for being human.");
         promptList.add("prompt 6");
         promptList.add("prompt 7");
         promptList.add("prompt 8");
