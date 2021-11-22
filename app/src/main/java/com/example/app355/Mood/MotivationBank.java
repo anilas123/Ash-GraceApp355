@@ -65,9 +65,9 @@ public class MotivationBank {
     private static List<MotivationList> ForAnnoyed(){
         final List<MotivationList> ForAnnoyed = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("11"); //<-- type here
+        final MotivationList line1 = new MotivationList("Everyone has off days! Practice self care to feel better."); //<-- type here
 
-        final MotivationList line2 = new MotivationList("12"); //<-- type here
+        final MotivationList line2 = new MotivationList("People getting on your nerves? Remember it's okay to set boundaries."); //<-- type here
 
         final MotivationList line3 = new MotivationList("13"); //<-- type here
 
