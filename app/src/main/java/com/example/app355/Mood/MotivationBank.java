@@ -14,7 +14,7 @@ public class MotivationBank {
 
         final MotivationList line1 = new MotivationList("Sounds like you're walking on sunshine! Shine on for those around you."); //<-- type here
 
-        final MotivationList line2 = new MotivationList("2"); //<-- type here
+        final MotivationList line2 = new MotivationList("Don't worry, keep being happy!"); //<-- type here
 
         final MotivationList line3 = new MotivationList("3"); //<-- type here
 
