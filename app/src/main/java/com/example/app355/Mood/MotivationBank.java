@@ -12,7 +12,7 @@ public class MotivationBank {
     private static List<MotivationList> ForHappy(){
         final List<MotivationList> ForHappy = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("1"); //<-- type here
+        final MotivationList line1 = new MotivationList("Sounds like you're walking on sunshine! Shine on for those around you."); //<-- type here
 
         final MotivationList line2 = new MotivationList("2"); //<-- type here
 
@@ -120,7 +120,7 @@ public class MotivationBank {
         final MotivationList line1 = new MotivationList("So today was a bit of a cock-up. Meh. " +
                 "It’s okay to be messy. Forgive yourself and hope for a radder tomorrow.");
 
-        final MotivationList line2 = new MotivationList("22"); //<-- type here
+        final MotivationList line2 = new MotivationList("There's always a rainbow after a storm! Keep your head up."); //<-- type here
 
         final MotivationList line3 = new MotivationList("23"); //<-- type here
 
