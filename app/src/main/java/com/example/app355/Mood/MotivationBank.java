@@ -38,7 +38,7 @@ public class MotivationBank {
     private static List<MotivationList> ForCalm(){
         final List<MotivationList> ForCalm = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("6"); //<-- type here
+        final MotivationList line1 = new MotivationList("Keep calm and carry on."); //<-- type here
 
         final MotivationList line2 = new MotivationList("7"); //<-- type here
 
@@ -91,7 +91,7 @@ public class MotivationBank {
     private static List<MotivationList> ForUpset(){
         final List<MotivationList> ForUpset = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("16"); //<-- type here
+        final MotivationList line1 = new MotivationList("Everybody has those days! Try talking through your feelings with a loved one."); //<-- type here
 
         final MotivationList line2 = new MotivationList("17"); //<-- type here
 
