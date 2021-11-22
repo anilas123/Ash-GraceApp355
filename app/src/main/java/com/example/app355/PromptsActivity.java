@@ -27,6 +27,9 @@ public class PromptsActivity extends AppCompatActivity {
         promptList.add("prompt 3");
         promptList.add("prompt 4");
         promptList.add("prompt 5");
+        promptList.add("prompt 6");
+        promptList.add("prompt 7");
+        promptList.add("prompt 8");
 
         ArrayAdapter promptAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, promptList);
         listView.setAdapter(promptAdapter);
