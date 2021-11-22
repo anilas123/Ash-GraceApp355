@@ -2,16 +2,33 @@ package com.example.app355;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class PromptsActivity extends AppCompatActivity {
-    public TextView textView;
+import java.util.ArrayList;
 
+public class PromptsActivity extends AppCompatActivity {
+
+
+    ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prompts);
-        textView.findViewById(R.id.textView);
+        listView = findViewById(R.id.listview);
+
+        ArrayList<String> promptList = new ArrayList<>();
+        promptList.add("prompt 1");
+        promptList.add("prompt 2");
+        promptList.add("prompt 3");
+        promptList.add("prompt 4");
+        promptList.add("prompt 5");
+
+        ArrayAdapter promptAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, promptList);
+        listView.setAdapter(promptAdapter);
     }
 }
