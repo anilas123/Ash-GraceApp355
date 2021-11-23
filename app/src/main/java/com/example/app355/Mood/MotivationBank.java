@@ -18,7 +18,7 @@ public class MotivationBank {
 
         final MotivationList line3 = new MotivationList("Seems like you're having a great day! Remember to cherish the good times."); //<-- type here
 
-        final MotivationList line4 = new MotivationList("4"); //<-- type here
+        final MotivationList line4 = new MotivationList("Glad that you're having a wonderful mood! Remember making other people happy will double your happiness."); //<-- type here
 
         final MotivationList line5 = new MotivationList("5"); //<-- type here
 
@@ -122,7 +122,7 @@ public class MotivationBank {
 
         final MotivationList line2 = new MotivationList("There's always a rainbow after a storm! Keep your head up."); //<-- type here
 
-        final MotivationList line3 = new MotivationList("23"); //<-- type here
+        final MotivationList line3 = new MotivationList("We can't change what's done, we can only move on."); //<-- type here
 
         final MotivationList line4 = new MotivationList("24"); //<-- type here
 
