@@ -58,11 +58,11 @@ public class Mood_ScorePage extends AppCompatActivity {
          * For different moods system will show user different pictures
          */
         if (Mood().equalsIgnoreCase(" you are happy")){
-            imageView.setImageResource(R.drawable.img_2);
+            imageView.setImageResource(R.drawable.happy);
             textView.setText("Hey! " + Mood_main.name + Mood());
         }
         else if(Mood().equalsIgnoreCase(" you are calm")){
-            imageView.setImageResource(R.drawable.img_3);
+            imageView.setImageResource(R.drawable.calm);
             textView.setText("Hey! " + Mood_main.name + Mood());
         }
         else if(Mood().equalsIgnoreCase(" you are annoyed")){
@@ -74,7 +74,7 @@ public class Mood_ScorePage extends AppCompatActivity {
             textView.setText("Hey! " + Mood_main.name + Mood());
         }
         else if(Mood().equalsIgnoreCase(" you are sad")){
-            imageView.setImageResource(R.drawable.img_4);
+            imageView.setImageResource(R.drawable.finalsad);
             textView.setText("Hey! " + Mood_main.name + Mood());
         }
             textView.setText("Hey! " + Mood_main.name + Mood());
