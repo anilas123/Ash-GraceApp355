@@ -124,7 +124,7 @@ public class MotivationBank {
 
         final MotivationList line3 = new MotivationList("We can't change what's done, we can only move on."); //<-- type here
 
-        final MotivationList line4 = new MotivationList("24"); //<-- type here
+        final MotivationList line4 = new MotivationList("Not every day can be perfect. Keep pushing through today, you got this."); //<-- type here
 
         final MotivationList line5 = new MotivationList("25"); //<-- type here
 
