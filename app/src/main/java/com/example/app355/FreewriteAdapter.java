@@ -2,6 +2,7 @@ package com.example.app355;
 
 import android.app.Activity;
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -12,25 +13,36 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.w3c.dom.Text;
 
+import java.util.List;
+
 public class FreewriteAdapter extends RecyclerView.Adapter<FreewriteAdapter.MyViewHolder> {
 
     Context context;
     Activity activity;
+    List<NotesModel> notesList;
+
+    public FreewriteAdapter(Context context, Activity activity, List<NotesModel> notesList) {
+        this.context = context;
+        this.activity = activity;
+        this.notesList = notesList;
+    }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fw_recyclerview_layout, parent,false);
+        return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
+        holder.title.setText(notesList.get(position).getTitle());
+        holder.description.setText(notesList.get(position).getDescription());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return notesList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
