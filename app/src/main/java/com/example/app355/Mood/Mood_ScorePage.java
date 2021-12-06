@@ -9,12 +9,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.app355.Calendar;
-import com.example.app355.JournalPage;
 import com.example.app355.MainActivity;
 import com.example.app355.R;
 
@@ -42,9 +39,7 @@ public class Mood_ScorePage extends AppCompatActivity {
         backBtn = findViewById(R.id.backButton);
         clickMeBtn = findViewById(R.id.clickMe);
 
-
         imageView = (ImageView) findViewById(R.id.image_view);
-
 
         happyLines = MotivationBank.getHappyLines();
         calmLines = MotivationBank.getCalmLines();
@@ -52,33 +47,7 @@ public class Mood_ScorePage extends AppCompatActivity {
         upsetLines = MotivationBank.getUpsetLines();
         sadLines = MotivationBank.getSadLines();
 
-
-
-        /*
-         * For different moods system will show user different pictures
-         */
-        if (Mood().equalsIgnoreCase(" you are happy")){
-            imageView.setImageResource(R.drawable.happy);
-            textView.setText("Hey! " + Mood_main.name + Mood());
-        }
-        else if(Mood().equalsIgnoreCase(" you are calm")){
-            imageView.setImageResource(R.drawable.calm);
-            textView.setText("Hey! " + Mood_main.name + Mood());
-        }
-        else if(Mood().equalsIgnoreCase(" you are annoyed")){
-            imageView.setImageResource(R.drawable.imag4);
-            textView.setText("Hey! " + Mood_main.name + Mood());
-        }
-        else if(Mood().equalsIgnoreCase(" you are upset")){
-            imageView.setImageResource(R.drawable.imag4);
-            textView.setText("Hey! " + Mood_main.name + Mood());
-        }
-        else if(Mood().equalsIgnoreCase(" you are sad")){
-            imageView.setImageResource(R.drawable.finalsad);
-            textView.setText("Hey! " + Mood_main.name + Mood());
-        }
-            textView.setText("Hey! " + Mood_main.name + Mood());
-
+        showMoodResult();
 
         retakeBtn.setOnClickListener(new View.OnClickListener() { //Button that takes user to the Mood_main page
             @Override
@@ -110,6 +79,32 @@ public class Mood_ScorePage extends AppCompatActivity {
             }
         });
 
+    }
+
+    /*
+     * For different moods system will show user different pictures
+     */
+    private void showMoodResult() {
+        if (Mood().equalsIgnoreCase(" you are happy")){
+            imageView.setImageResource(R.drawable.happy);
+            textView.setText("Hey! " + Mood_main.name + Mood());
+        }
+        else if(Mood().equalsIgnoreCase(" you are calm")){
+            imageView.setImageResource(R.drawable.calm);
+            textView.setText("Hey! " + Mood_main.name + Mood());
+        }
+        else if(Mood().equalsIgnoreCase(" you are annoyed")){
+            imageView.setImageResource(R.drawable.imag4);
+            textView.setText("Hey! " + Mood_main.name + Mood());
+        }
+        else if(Mood().equalsIgnoreCase(" you are upset")){
+            imageView.setImageResource(R.drawable.imag4);
+            textView.setText("Hey! " + Mood_main.name + Mood());
+        }
+        else if(Mood().equalsIgnoreCase(" you are sad")){
+            imageView.setImageResource(R.drawable.finalsad);
+            textView.setText("Hey! " + Mood_main.name + Mood());
+        }
     }
 
     /*
