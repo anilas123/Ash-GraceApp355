@@ -21,7 +21,7 @@ public class Mood_ScorePage extends AppCompatActivity {
 
     private TextView textView;
     private ImageView imageView;
-    private AppCompatButton saveBtn,retakeBtn,backBtn,clickMeBtn;
+    private AppCompatButton saveBtn,retakeBtn,backBtn,clickMeBtn,shareBtn;
     private List<MotivationList> happyLines,calmLines,annoyedLines,upsetLines,sadLines;
 
     Random rand = new Random();
@@ -38,6 +38,7 @@ public class Mood_ScorePage extends AppCompatActivity {
         retakeBtn = findViewById(R.id.retakeButton);
         backBtn = findViewById(R.id.backButton);
         clickMeBtn = findViewById(R.id.clickMe);
+        shareBtn = findViewById(R.id.shareButton);
 
         imageView = (ImageView) findViewById(R.id.image_view);
 
@@ -76,6 +77,13 @@ public class Mood_ScorePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setMotivationLines();
+            }
+        });
+
+        shareBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shareResult();
             }
         });
 
@@ -178,6 +186,17 @@ public class Mood_ScorePage extends AppCompatActivity {
             textView.setTextColor(Color.parseColor("#f8b703"));
 
         }
+    }
+
+    private void shareResult()
+    {
+        Intent myIntent = new Intent(Intent.ACTION_SEND);
+        myIntent.setType("text/plain");
+        String shareBody = "Your body here";
+        String shareSub = "Your Subject here";
+        myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
+        myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+        startActivity(Intent.createChooser(myIntent, "Share using"));
     }
 
 
