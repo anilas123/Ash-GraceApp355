@@ -93,25 +93,25 @@ public class Mood_ScorePage extends AppCompatActivity {
      * For different moods system will show user different pictures
      */
     private void showMoodResult() {
-        if (Mood().equalsIgnoreCase(" you are happy")){
+        if (Mood().equalsIgnoreCase(" glad to see you are happy!")){
             imageView.setImageResource(R.drawable.happy);
             textView.setText("Hey! " + Mood_main.name + Mood());
         }
-        else if(Mood().equalsIgnoreCase(" you are calm")){
+        else if(Mood().equalsIgnoreCase(" I'm glad you are calm!")){
             imageView.setImageResource(R.drawable.calm);
             textView.setText("Hey! " + Mood_main.name + Mood());
         }
-        else if(Mood().equalsIgnoreCase(" you are annoyed")){
+        else if(Mood().equalsIgnoreCase(" you might be a little annoyed!")){
             imageView.setImageResource(R.drawable.imag4);
             textView.setText("Hey! " + Mood_main.name + Mood());
         }
-        else if(Mood().equalsIgnoreCase(" you are upset")){
+        else if(Mood().equalsIgnoreCase(" calm down, you are kinda upset!")){
             imageView.setImageResource(R.drawable.imag4);
             textView.setText("Hey! " + Mood_main.name + Mood());
         }
-        else if(Mood().equalsIgnoreCase(" you are sad")){
-            imageView.setImageResource(R.drawable.finalsad);
-            textView.setText("Hey! " + Mood_main.name + Mood());
+        else if(Mood().equalsIgnoreCase(" you might be sad!")){
+            imageView.setImageResource(R.drawable.rsz_11finalsad);
+            textView.setText("I'm sorry " + Mood_main.name + Mood());
         }
     }
 
@@ -129,19 +129,19 @@ public class Mood_ScorePage extends AppCompatActivity {
             }
         }
         if (large == Mood_Q1.happyCount){
-            return " You are Happy";
+            return " glad to see you are happy!";
         }
         else if(large == Mood_Q1.calmCount){
-            return " You are Calm";
+            return " I'm glad you are calm!";
         }
         else if(large == Mood_Q1.annoyedCount){
-            return " You are Annoyed";
+            return " you might be a little annoyed!";
         }
         else if(large == Mood_Q1.upsetCount){
-            return " You are Upset";
+            return " calm down, you are kinda upset!";
         }
         else if(large == Mood_Q1.sadCount){
-            return " You are Sad";
+            return " you might be sad!";
         }
         else
             return "";
@@ -165,19 +165,19 @@ public class Mood_ScorePage extends AppCompatActivity {
 
     private void setMotivationLines(){
 
-        if (Mood().equalsIgnoreCase(" You are Sad")){
+        if (Mood().equalsIgnoreCase(" you might be sad!")){
             textView.setText(sadLines.get(currentPosition).getLines());
             textView.setTextColor(Color.parseColor("#f8b703"));
 
-        }else if(Mood().equalsIgnoreCase(" you are upset")){
+        }else if(Mood().equalsIgnoreCase(" calm down, you are kinda upset!")){
             textView.setText(upsetLines.get(currentPosition).getLines());
             textView.setTextColor(Color.parseColor("#f8b703"));
 
-        }else if(Mood().equalsIgnoreCase(" you are annoyed")){
+        }else if(Mood().equalsIgnoreCase(" you might be a little annoyed!")){
             textView.setText(annoyedLines.get(currentPosition).getLines());
             textView.setTextColor(Color.parseColor("#f8b703"));
 
-        }else if(Mood().equalsIgnoreCase(" you are calm")){
+        }else if(Mood().equalsIgnoreCase(" I'm glad you are calm!")){
             textView.setText(calmLines.get(currentPosition).getLines());
             textView.setTextColor(Color.parseColor("#f8b703"));
 
@@ -192,7 +192,7 @@ public class Mood_ScorePage extends AppCompatActivity {
     {
         Intent myIntent = new Intent(Intent.ACTION_SEND);
         myIntent.setType("text/plain");
-        String shareBody = "Your body here";
+        String shareBody = "Hey! I just did my MoodCheck. " + "\nCome check it out and find your mood for today!";
         String shareSub = "Your Subject here";
         myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
         myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
