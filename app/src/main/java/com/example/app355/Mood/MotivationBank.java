@@ -12,13 +12,13 @@ public class MotivationBank {
     private static List<MotivationList> ForHappy(){
         final List<MotivationList> ForHappy = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("1"); //<-- type here
+        final MotivationList line1 = new MotivationList("Sounds like you're walking on sunshine! Shine on for those around you."); //<-- type here
 
-        final MotivationList line2 = new MotivationList("2"); //<-- type here
+        final MotivationList line2 = new MotivationList("Don't worry, be happy."); //<-- type here
 
-        final MotivationList line3 = new MotivationList("3"); //<-- type here
+        final MotivationList line3 = new MotivationList("Seems like you're having a great day! Remember to cherish the good times."); //<-- type here
 
-        final MotivationList line4 = new MotivationList("4"); //<-- type here
+        final MotivationList line4 = new MotivationList("Glad that you're having a wonderful mood! Remember making other people happy will double your happiness."); //<-- type here
 
         final MotivationList line5 = new MotivationList("5"); //<-- type here
 
@@ -38,7 +38,7 @@ public class MotivationBank {
     private static List<MotivationList> ForCalm(){
         final List<MotivationList> ForCalm = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("6"); //<-- type here
+        final MotivationList line1 = new MotivationList("Keep calm and carry on."); //<-- type here
 
         final MotivationList line2 = new MotivationList("7"); //<-- type here
 
@@ -65,9 +65,9 @@ public class MotivationBank {
     private static List<MotivationList> ForAnnoyed(){
         final List<MotivationList> ForAnnoyed = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("11"); //<-- type here
+        final MotivationList line1 = new MotivationList("Everyone has off days! Practice self care to feel better."); //<-- type here
 
-        final MotivationList line2 = new MotivationList("12"); //<-- type here
+        final MotivationList line2 = new MotivationList("People getting on your nerves? Remember it's okay to set boundaries."); //<-- type here
 
         final MotivationList line3 = new MotivationList("13"); //<-- type here
 
@@ -91,7 +91,7 @@ public class MotivationBank {
     private static List<MotivationList> ForUpset(){
         final List<MotivationList> ForUpset = new ArrayList<>();
 
-        final MotivationList line1 = new MotivationList("16"); //<-- type here
+        final MotivationList line1 = new MotivationList("Everybody has those days! Try talking through your feelings with a loved one."); //<-- type here
 
         final MotivationList line2 = new MotivationList("17"); //<-- type here
 
@@ -120,11 +120,11 @@ public class MotivationBank {
         final MotivationList line1 = new MotivationList("So today was a bit of a cock-up. Meh. " +
                 "It’s okay to be messy. Forgive yourself and hope for a radder tomorrow.");
 
-        final MotivationList line2 = new MotivationList("22"); //<-- type here
+        final MotivationList line2 = new MotivationList("There's always a rainbow after a storm! Keep your head up."); //<-- type here
 
-        final MotivationList line3 = new MotivationList("23"); //<-- type here
+        final MotivationList line3 = new MotivationList("We can't change what's done, we can only move on."); //<-- type here
 
-        final MotivationList line4 = new MotivationList("24"); //<-- type here
+        final MotivationList line4 = new MotivationList("Not every day can be perfect. Keep pushing through today, you got this."); //<-- type here
 
         final MotivationList line5 = new MotivationList("25"); //<-- type here
 

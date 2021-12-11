@@ -2,17 +2,50 @@ package com.example.app355;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FreewriteActivity extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    FloatingActionButton fab;
+    FreewriteAdapter adapter;
+    List<NotesModel> notesList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_freewrite);
+
+        recyclerView = findViewById(R.id.fwRecyclerView);
+        fab = findViewById(R.id.fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FreewriteActivity.this, AddNotesActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        notesList = new ArrayList<>();
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new FreewriteAdapter(this, FreewriteActivity.this, notesList);
+        recyclerView.setAdapter(adapter);
+
     }
 
     @Override
