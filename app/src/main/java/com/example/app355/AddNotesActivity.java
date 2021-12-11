@@ -28,7 +28,8 @@ public class AddNotesActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(TextUtils.isEmpty(title.getText().toString()) && TextUtils.isEmpty(description.getText().toString())) {
-
+                    DatabaseClass db=new DatabaseClass(AddNotesActivity.this);
+                    db.addNotes(title.getText().toString(), description.getText().toString());
                 }
                 else {
                     Toast.makeText(AddNotesActivity.this, "Both Fields Required", Toast.LENGTH_SHORT).show();
