@@ -76,4 +76,11 @@ public class DatabaseClass extends SQLiteOpenHelper {
         return cursor;
 
     }
+
+    void deleteAllNotes() {
+        SQLiteDatabase database = this.getReadableDatabase();
+        String query = "DELETE FROM " + TableName;
+
+        database.execSQL(query);
+    }
 }
