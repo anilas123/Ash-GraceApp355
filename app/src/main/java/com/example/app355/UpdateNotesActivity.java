@@ -37,7 +37,12 @@ public class UpdateNotesActivity extends AppCompatActivity {
 
                 if (!TextUtils.isEmpty(title.getText().toString()) && !TextUtils.isEmpty(description.getText().toString())) {
                     DatabaseClass db = new DatabaseClass(UpdateNotesActivity.this);
-                    db.updateNotes(title.getText().toString(), description.getText().toString());
+                    db.updateNotes(title.getText().toString(), description.getText().toString(), id);
+
+                    Intent intent = new Intent(UpdateNotesActivity.this, FreewriteActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity();
+                    finish();
                 }
                 else {
                     Toast.makeText(UpdateNotesActivity.this, "Both Fields Required", Toast.LENGTH_SHORT).show();
