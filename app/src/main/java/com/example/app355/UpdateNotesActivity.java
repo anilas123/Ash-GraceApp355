@@ -41,7 +41,7 @@ public class UpdateNotesActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(UpdateNotesActivity.this, FreewriteActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity();
+                    startActivity(intent);
                     finish();
                 }
                 else {

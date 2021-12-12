@@ -33,6 +33,6 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:id="@+id/addNote"/>
+        android:id="@+id/updateNote"/>
 
 </RelativeLayout>
