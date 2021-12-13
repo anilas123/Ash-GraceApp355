@@ -110,7 +110,7 @@ public class Mood_ScorePage extends AppCompatActivity {
             textView.setText("Hey! " + Mood_main.name + Mood());
         }
         else if(Mood().equalsIgnoreCase(" you might be sad!")){
-            imageView.setImageResource(R.drawable.rsz_11finalsad);
+            imageView.setImageResource(R.drawable.rsz_1rsz_11sad);
             textView.setText("I'm sorry " + Mood_main.name + Mood());
         }
     }
