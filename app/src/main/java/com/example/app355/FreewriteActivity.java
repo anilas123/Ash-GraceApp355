@@ -1,15 +1,20 @@
 package com.example.app355;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.ColorSpace;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -22,6 +27,7 @@ public class FreewriteActivity extends AppCompatActivity {
     FloatingActionButton fab;
     FreewriteAdapter adapter;
     List<NotesModel> notesList;
+    DatabaseClass databaseClass;
 
 
     @Override
@@ -42,9 +48,27 @@ public class FreewriteActivity extends AppCompatActivity {
         });
 
         notesList = new ArrayList<>();
+
+        databaseClass = new DatabaseClass(this);
+        fetchNotes();
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new FreewriteAdapter(this, FreewriteActivity.this, notesList);
         recyclerView.setAdapter(adapter);
+
+    }
+
+    void fetchNotes() {
+        Cursor cursor = databaseClass.readAllData();
+
+        if (cursor.getCount() == 0) {
+            Toast.makeText(this, "No Data To Display", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            while (cursor.moveToNext()) {
+                notesList.add(new NotesModel(cursor.getString(0), cursor.getString(1), cursor.getString(2)));
+            }
+        }
 
     }
 
@@ -72,5 +96,21 @@ public class FreewriteActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(listener);
 
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.delete_all_notes) {
+            deleteAllNotes();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void deleteAllNotes() {
+        DatabaseClass db = new DatabaseClass(FreewriteActivity.this);
+        db.deleteAllNotes();
+        recreate();
     }
 }

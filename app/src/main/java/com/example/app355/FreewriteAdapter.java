@@ -2,6 +2,7 @@ package com.example.app355;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,20 @@ public class FreewriteAdapter extends RecyclerView.Adapter<FreewriteAdapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.title.setText(notesList.get(position).getTitle());
         holder.description.setText(notesList.get(position).getDescription());
+
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, UpdateNotesActivity.class);
+
+                intent.putExtra("title", notesList.get(position).getTitle());
+                intent.putExtra("description", notesList.get(position).getDescription());
+                intent.putExtra("id", notesList.get(position).getId());
+
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override

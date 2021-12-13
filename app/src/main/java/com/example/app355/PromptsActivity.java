@@ -29,7 +29,12 @@ public class PromptsActivity extends AppCompatActivity {
         promptList.add("Write an apology to yourself. Forgive yourself for being human.");
         promptList.add("Where do you want to be in 10 years? How will you get there?");
         promptList.add("List some of your favorite things in life. How do these things make you feel?");
-        promptList.add("prompt 8");
+        promptList.add("Write a haiku about your day.");
+        promptList.add("Describe a small thing that makes you very happy.");
+        promptList.add("What do you want to achieve today, this week, or this month?");
+        promptList.add("Dump out anything you're frustrated about. Why is it making you frustrated?");
+        promptList.add("How do you feel today?");
+
 
         ArrayAdapter promptAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, promptList);
         listView.setAdapter(promptAdapter);

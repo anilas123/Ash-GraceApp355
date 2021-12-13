@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.12222222222222222" />
+        <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/layout/activity_add_notes.xml" value="0.15780141843971632" />
         <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/layout/activity_calendar.xml" value="0.25" />
         <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/layout/activity_freewrite.xml" value="0.25" />
         <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/layout/activity_journal_page.xml" value="0.25" />
         <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/layout/activity_main.xml" value="0.2869791666666667" />
+        <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/layout/activity_update_notes.xml" value="0.296195652173913" />
+        <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/layout/activity_update_notes2.xml" value="0.296195652173913" />
         <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/layout/calendar_cells.xml" value="0.25" />
         <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/layout/fw_recyclerview_layout.xml" value="0.1" />
         <entry key="..\:/Users/Ash/AndroidStudioProjects/App355/app/src/main/res/menu/options_menu.xml" value="0.1" />
