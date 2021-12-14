@@ -49,33 +49,14 @@ public class DatabaseClass extends SQLiteOpenHelper {
 
         ContentValues cv = new ContentValues();
 
-        cv.put(ColumnTitle,title);
-        cv.put(ColumnDescription,description);
-
-        long resultValue = db.insert(TableName,null,cv);
-
-        if (resultValue == -1) {
-            Toast.makeText(context, "Data Not Added", Toast.LENGTH_SHORT).show();
-        }
-        else {
-            Toast.makeText(context,"Data Added Successfully", Toast.LENGTH_SHORT).show();
-        }
-
-    void addNotes(String title, String description) {
-        SQLiteDatabase db=this.getWritableDatabase();
-
-        ContentValues cv=new ContentValues();
-
         cv.put(ColumnTitle, title);
         cv.put(ColumnDescription, description);
 
         long resultValue = db.insert(TableName, null, cv);
 
-        if(resultValue == -1) {
+        if (resultValue == -1) {
             Toast.makeText(context, "Data Not Added", Toast.LENGTH_SHORT).show();
-
-        }
-        else {
+        } else {
             Toast.makeText(context, "Data Added Successfully", Toast.LENGTH_SHORT).show();
         }
     }
