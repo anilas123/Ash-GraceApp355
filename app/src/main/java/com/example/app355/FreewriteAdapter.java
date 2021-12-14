@@ -77,7 +77,7 @@ public class FreewriteAdapter extends RecyclerView.Adapter<FreewriteAdapter.MyVi
         }
     }
 
-    private List<NotesModel> getList() {
+    public List<NotesModel> getList() {
         return notesList;
     }
 
