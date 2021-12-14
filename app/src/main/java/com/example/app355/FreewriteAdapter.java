@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.ColorSpace;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,5 +75,19 @@ public class FreewriteAdapter extends RecyclerView.Adapter<FreewriteAdapter.MyVi
             description = itemView.findViewById(R.id.notes_description);
             layout = itemView.findViewById(R.id.note_layout);
         }
+    }
+
+    public List<NotesModel> getList() {
+        return notesList;
+    }
+
+    public void removeItem(int position) {
+        notesList.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void restoreItem(NotesModel item, int position) {
+        notesList.add(position, item);
+        notifyItemInserted(position);
     }
 }
