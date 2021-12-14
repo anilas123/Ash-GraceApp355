@@ -1,9 +1,11 @@
 package com.example.app355;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,5 +41,24 @@ public class DatabaseClass extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TableName);
         onCreate(db);
+    }
+
+    void addNotes(String title, String description) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+
+        cv.put(ColumnTitle,title);
+        cv.put(ColumnDescription,description);
+
+        long resultValue = db.insert(TableName,null,cv);
+
+        if (resultValue == -1) {
+            Toast.makeText(context, "Data Not Added", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(context,"Data Added Successfully", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }
