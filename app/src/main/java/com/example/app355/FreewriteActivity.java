@@ -3,6 +3,8 @@ package com.example.app355;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,6 +30,7 @@ public class FreewriteActivity extends AppCompatActivity {
     FreewriteAdapter adapter;
     List<NotesModel> notesList;
     DatabaseClass databaseClass;
+    CoordinatorLayout coordinatorLayout;
 
 
     @Override
@@ -37,6 +40,7 @@ public class FreewriteActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.fwRecyclerView);
         fab = findViewById(R.id.fab);
+        coordinatorLayout = findViewById(R.id.layout_freewrite);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,4 +117,17 @@ public class FreewriteActivity extends AppCompatActivity {
         db.deleteAllNotes();
         recreate();
     }
+
+    ItemTouchHelper.SimpleCallback callback = new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+            int position = viewHolder.getAdapterPosition();
+        }
+    };
+
 }
