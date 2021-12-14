@@ -39,11 +39,27 @@ public class DatabaseClass extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TableName);
-
         onCreate(db);
     }
+
+    void addNotes(String title, String description) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+
+        cv.put(ColumnTitle,title);
+        cv.put(ColumnDescription,description);
+
+        long resultValue = db.insert(TableName,null,cv);
+
+        if (resultValue == -1) {
+            Toast.makeText(context, "Data Not Added", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(context,"Data Added Successfully", Toast.LENGTH_SHORT).show();
+        }
 
     void addNotes(String title, String description) {
         SQLiteDatabase db=this.getWritableDatabase();
