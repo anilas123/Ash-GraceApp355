@@ -36,6 +36,8 @@ public class FreewriteAdapter extends RecyclerView.Adapter<FreewriteAdapter.MyVi
         return new MyViewHolder(view);
     }
 
+    //position variable suppressed and project re-clone to fix build error
+
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.title.setText(notesList.get(position).getTitle());
